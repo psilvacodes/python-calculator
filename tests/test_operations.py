@@ -1,6 +1,6 @@
 import pytest
 
-from calculator.operations import add, divide, multiply, subtract
+from calculator.operations import add, divide, multiply, sqrt, subtract
 
 
 def test_add():
@@ -28,3 +28,16 @@ def test_divide_by_zero():
 
 # def test_add_fail():
 #     assert add(2, 2) == 5  # intentionally wrong
+
+
+def test_sqrt_positive():
+    assert sqrt(9) == pytest.approx(3.0)
+
+
+def test_sqrt_zero():
+    assert sqrt(0) == pytest.approx(0.0)
+
+
+def test_sqrt_negative_raises():
+    with pytest.raises(ValueError):
+        sqrt(-1)
