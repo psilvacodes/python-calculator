@@ -1,3 +1,5 @@
+"""Unit tests for calculator.operations."""
+
 import pytest
 
 from calculator.operations import add, divide, multiply, sqrt, subtract
